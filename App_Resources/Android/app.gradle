@@ -1,0 +1,35 @@
+// Add your native dependencies here:
+
+// Uncomment to add recyclerview-v7 dependency
+//dependencies {
+//	implementation 'com.android.support:recyclerview-v7:+'
+//}
+
+// If you want to add something to be applied before applying plugins' include.gradle files
+// e.g. project.ext.googlePlayServicesVersion = "15.0.1"
+// create a file named before-plugins.gradle in the current directory and place it there
+
+android {
+  defaultConfig {
+    minSdkVersion 24
+    generatedDensities = []
+  }
+  aaptOptions {
+    additionalParameters "--no-version-vectors"
+  }
+      compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+dependencies {
+  
+    // Provides ARCore Session and related resources.
+    implementation 'com.google.ar:core:1.15.0'
+
+    // Provides ArFragment, and other UX resources.
+    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.15.0'
+
+    // Alternatively, use ArSceneView without the UX dependency.
+    implementation 'com.google.ar.sceneform:core:1.15.0'
+}
