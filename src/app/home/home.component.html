@@ -1,10 +1,14 @@
 <ActionBar title="WELCOME"></ActionBar>
-
+<NavigationButton ios:visibility="collapsed" icon="res://menu" (tap)="onDrawerButtonTap()"></NavigationButton>
 <GridLayout class="page">
+  <StackLayout id="myUIView">
+    <Label text="any NativeScript view can go here" horizontalAlignment="center"></Label>
+  </StackLayout>
   <AR *ngIf="loaded"
     debugLevel="FEATURE_POINTS"
     detectPlanes="false"
-    [planeMaterial]="planeMaterial">
+    [planeMaterial]="planeMaterial"
+    >
     
   </AR>
   
